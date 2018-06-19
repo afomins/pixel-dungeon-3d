@@ -1,0 +1,9 @@
+telnet localhost 5554
+auth RrzxxR9F1H2GaRh0
+redir add tcp:50002:12345
+
+./adb kill-server
+./adb start-server
+
+android. -> stub.android.
+javax.microedition.khronos. -> stub.javax.microedition.khronos.
