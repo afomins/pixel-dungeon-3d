@@ -6,6 +6,15 @@ This was my hobby project that I was coding on my free time from November'2016 t
 it does not look the way I was imagining it and I'm not going to continue development because I'm tired of it! I'll just 
 leave it over here and switch to other projects.
 
+# PR
+https://twitter.com/matalokgames - twitter account where I used to share progress while developing [#pixeldungeon3d](https://twitter.com/search?f=tweets&vertical=default&q=%23pixeldungeon3d&src=typd)
+
+https://redd.it/72642r - reddit post #1 where I first announced this 3D mod
+
+https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
+
+https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
+
 # How it looks
 Following 2 GIFs illustrate how my 3D mod looks like - on the left side you see original *Pixel Dungeon* `v1.9.7` and on the right side
 is *Pixel Dungeon 3D* `v0.2.8` that is redering same game session:
