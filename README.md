@@ -1,5 +1,5 @@
 # What is "Pixel Dungeon 3D"
-*Pixel Dungeon 3D* is mod that adds new 3D-renderer and new GUI to original *Pixel Dungeon* `v1.9.7`. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *Pixel Dungeon* with new 3D visuals and differnet controls.
+*Pixel Dungeon 3D* is mod that adds new 3D-renderer and new GUI to original *Pixel Dungeon* `v1.9.7`. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *Pixel Dungeon* with new 3D visuals and different controls.
 
 This was my hobby project that I was coding on my free time for 18 months. It is still half-finished and needs a lot of polishing, but I'm not going to continue development right now because I'm really tired of it! 
 
@@ -8,7 +8,7 @@ I'll just leave it over here and switch to other projects.
 # External links
 https://twitter.com/matalokgames - twitter account where I used to share progress while developing [#pixeldungeon3d](https://twitter.com/search?f=tweets&vertical=default&q=%23pixeldungeon3d&src=typd)
 
-https://www.youtube.com/channel/UCovOZS4bKNiW_aX1yoktwOA - youtube account where I used to publish gameplay videos
+https://www.youtube.com/channel/UCovOZS4bKNiW_aX1yoktwOA - youtube channel where I used to publish gameplay videos
 
 https://redd.it/72642r - reddit post #1 where I first announced this 3D mod
 
@@ -24,7 +24,7 @@ $TODO
 # Technical details
 $TODO
 
-# How to prepare project files
+# How to checkout sources and prepare project files
 *Pixel Dungeon 3D* is split between 4 git repositories + some external dependent packages managed by *Gradle*. I was using *Eclipse* and 
 *IntelliJ IDEA* (aka *Android Studio*) as my IDE, but you can use anything else as long as it supports *Gradle*.
 
@@ -85,15 +85,15 @@ Following external packages are managed by *Gradle*:
 5. `com.kotcrab.vis:vis-ui:1.4.0`
 6. `com.google.code.gson:gson:2.8.2`
 
-You should not care about those because *Gradle* will automatically download those packages and update *IntelliJ IDEA* project files
+You should not care about external packages because *Gradle* will automatically download them and update *IntelliJ IDEA* project files.
 
 # Build instructions for Desktop
-Select `./android/assets` as your workign directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class
+Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class.
 
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
 # Build instructions for Android
-Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be subsituted to `stub.android.*` and `stub.javax.*` accordigly.
+Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly.
 
 For instance:
 ```
@@ -101,13 +101,13 @@ import javax.microedition.khronos.opengles.GL10;  -> import stub.javax.microedit
 import android.opengl.GLES20;                     -> import stub.android.opengl.GLES20;
 ```
 
-This step is *necessary evil* which ensures that native *Pixel Dungeon* sources call methods from `stub.android.*` packages instead of `android.*`. 
+This step is *necessary evil* which ensures that native *Pixel Dungeon* sources call custom methods from `stub.android.*` packages instead of `android.*`. 
 
-To automate this task I created `./scripts/stubs.sh` shell script that can add/delete this `stub` hack when necessary. 
+To automate this task I created `./pd3d/scripts/stubs.sh` shell script that can add/delete this **stub hack** when necessary. 
 
 The only problem with this script is that it uses `/bin/bash` syntax which can be run either on native Linux or Cygwin.
 
-1. Navigate to `./pixel-dungeon-3d/scripts` directory
+1. Navigate to `./pd3d/scripts` directory
 2. Run `./stubs.sh add` to replace `android.*` package import with `stub.android.*`
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
 4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
