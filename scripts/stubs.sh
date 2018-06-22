@@ -5,7 +5,7 @@ USAGE="$0 add|del"
 
 PD3D_DIR="../core/src/com/matalok/pd"
 STUBS_DIR="../core/src-stubs"
-PD_CLASSES_DIR="../core/pd-classes/com/watabou"
+PD_CLASSES_DIR="../core/pixel-dungeon-classes/com/watabou"
 PD_DIR="../core/pixel-dungeon/src"
 
 #-------------------------------------------------------------------------------
