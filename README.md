@@ -1,13 +1,14 @@
 # What is "Pixel Dungeon 3D"
-*Pixel Dungeon 3D* is mod that adds new 3D-renderer and new GUI to original *Pixel Dungeon* `v1.9.7`. 
-This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *Pixel Dungeon* in a new 3D wrapper
+*Pixel Dungeon 3D* is mod that adds new 3D-renderer and new GUI to original *Pixel Dungeon* `v1.9.7`. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *Pixel Dungeon* with new 3D visuals and differnet controls.
 
-This was my hobby project that I was coding on my free time from November'2016 to May'2018, but even after 19 months of development 
-it does not look the way I was imagining it and I'm not going to continue development because I'm tired of it! I'll just 
-leave it over here and switch to other projects.
+This was my hobby project that I was coding on my free time for 18 months. It is still half-finished and needs a lot of polishing, but I'm not going to continue development right now because I'm really tired of it! 
 
-# PR
+I'll just leave it over here and switch to other projects.
+
+# External links
 https://twitter.com/matalokgames - twitter account where I used to share progress while developing [#pixeldungeon3d](https://twitter.com/search?f=tweets&vertical=default&q=%23pixeldungeon3d&src=typd)
+
+https://www.youtube.com/channel/UCovOZS4bKNiW_aX1yoktwOA - youtube account where I used to publish gameplay videos
 
 https://redd.it/72642r - reddit post #1 where I first announced this 3D mod
 
@@ -16,49 +17,48 @@ https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
 https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
 # How it looks
-Following 2 GIFs illustrate how my 3D mod looks like - on the left side you see original *Pixel Dungeon* `v1.9.7` and on the right side
-is *Pixel Dungeon 3D* `v0.2.8` that is redering same game session:
+Following 2 GIFs illustrate how my 3D mod looks like comparing with original - on the left side you see original *Pixel Dungeon* `v1.9.7` and on the right side is *Pixel Dungeon 3D* `v0.2.8` which is redering *same game session*:
 
 $TODO
 
 # Technical details
 $TODO
 
-# Prepare project
+# How to prepare project files
 *Pixel Dungeon 3D* is split between 4 git repositories + some external dependent packages managed by *Gradle*. I was using *Eclipse* and 
-*IntelliJ IDEA* as my IDE, but you can use anything else as long as it supports *Gradle*.
+*IntelliJ IDEA* (aka *Android Studio*) as my IDE, but you can use anything else as long as it supports *Gradle*.
 
 Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ IDEA*
 1. Create root project from `pixel-dungeon-3d.git`:
    
-   Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository
+   Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
    
-   In *"Import project"* window select `"Gradle"` and then tap `"Create separate module per source set"` checkbox
+   In *"Import project"* window select `"Gradle"` and then tap `"Create separate module per source set"` checkbox.
    
-   When *Gradle sync* is over then you should see `pixel-dungeon-3d` project with following modules - `core`, `desktop` and `android`
+   When *Gradle sync* is over then you should see `pd3d` project with `core`, `desktop` and `android` modules.
    
 2. Import `pixel-dungeon-3d-lib.git`:
 
-   Clone `git@github.com:afomins/pixel-dungeon-3d-lib.git` to `./core/pixel-dungeon-3d-lib` directory (navigate `VCS -> Checkout from Version Control -> Git`)
+   Clone `git@github.com:afomins/pixel-dungeon-3d-lib.git` to `./pd3d/core/pixel-dungeon-3d-lib` directory (you can do this by navigating to `VCS -> Checkout from Version Control -> Git` menu)
    
-   Press `No` if *IntelliJ IDEA* asks you to create new project from `pixel-dungeon-3d-lib.git`
+   (Press `No` if *IntelliJ IDEA* asks you to create new project)
    
 3. Import `pixel-dungeon-classes.git`:
 
-   Clone `git@github.com:afomins/pixel-dungeon-classes.git` to `./core/pixel-dungeon-classes` directory
+   Clone `git@github.com:afomins/pixel-dungeon-classes.git` to `./pd3d/core/pixel-dungeon-classes` directory.
    
-   Press `No` if *IntelliJ IDEA* asks you to create new project from `pixel-dungeon-classes.git`
+   (Press `No` if *IntelliJ IDEA* asks you to create new project)
 
 4. Import `pixel-dungeon.git`:
 
-   Clone `git@github.com:afomins/pixel-dungeon.git` to `./core/pixel-dungeon` directory
+   Clone `git@github.com:afomins/pixel-dungeon.git` to `./pd3d/core/pixel-dungeon` directory.
    
-   Press `No` if *IntelliJ IDEA* asks you to create new project from `pixel-dungeon.git`
+   (Press `No` if *IntelliJ IDEA* asks you to create new project)
    
 
 When you complete above mentioned steps then your project should have following structure:
 ```
-   pixel-dungeon-3d
+   pd3d
      |
      +-- core
      |     | 
@@ -74,7 +74,7 @@ When you complete above mentioned steps then your project should have following 
 ```
 
 
-**IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pixel-dungeon-3d/core/pixel-dungeon/assets` to `./pixel-dungeon/android/assets`.
+**IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pdd/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
 
 # External packages
 Following external packages are managed by *Gradle*:
@@ -85,7 +85,7 @@ Following external packages are managed by *Gradle*:
 5. `com.kotcrab.vis:vis-ui:1.4.0`
 6. `com.google.code.gson:gson:2.8.2`
 
-Gradle should automatically download those packages and update *IntelliJ IDEA* project files
+You should not care about those because *Gradle* will automatically download those packages and update *IntelliJ IDEA* project files
 
 # Build instructions for Desktop
 Select `./android/assets` as your workign directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class
@@ -93,8 +93,21 @@ Select `./android/assets` as your workign directory and run `com.matalok.pd3d.de
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
 # Build instructions for Android
-Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly. This step is needed to ensure that native *Pixel Dungeon* sources call `stub` methods instead of `android` methods. To automate this task I created `./scripts/stub.sh` shell script that can add and delete `stubs` when necessary. The only problem with this script is that it uses `bash` syntax which can be run from either from native Linux or from Cygwin running on Windows.
+Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be subsituted to `stub.android.*` and `stub.javax.*` accordigly.
+
+For instance:
+```
+import javax.microedition.khronos.opengles.GL10;  -> import stub.javax.microedition.khronos.opengles.GL10;
+import android.opengl.GLES20;                     -> import stub.android.opengl.GLES20;
+```
+
+This step is *necessary evil* which ensures that native *Pixel Dungeon* sources call methods from `stub.android.*` packages instead of `android.*`. 
+
+To automate this task I created `./scripts/stubs.sh` shell script that can add/delete this `stub` hack when necessary. 
+
+The only problem with this script is that it uses `/bin/bash` syntax which can be run either on native Linux or Cygwin.
 
 1. Navigate to `./pixel-dungeon-3d/scripts` directory
-2. Run `./stub.sh add` to replace *android* method calls to *stub* method calls 
+2. Run `./stubs.sh add` to replace `android.*` package import with `stub.android.*`
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
+4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
