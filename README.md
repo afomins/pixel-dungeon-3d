@@ -74,7 +74,7 @@ When you complete above mentioned steps then your project should have following 
 ```
 
 
-**IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pdd/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
+**IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pd3d/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
 
 # External packages
 Following external packages are managed by *Gradle*:
