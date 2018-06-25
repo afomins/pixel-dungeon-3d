@@ -6,13 +6,13 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 I'll just leave it over here and switch to other projects.
 
 # How it looks
-Following GIFs illustrate how 3D mod looks like comparing to original - **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` (*client*) attaches to original *Pixel Dungeon* `v1.9.7` running in **Android emulator** (server) and renders **same** game session:
+Following GIFs illustrate how 3D mod looks like comparing to original - **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` (*client*) attaches to original *Pixel Dungeon* `v1.9.7` running in **Android emulator** (*server*) and renders **same** game session:
 
-| Rotating in first room of first level | Exploring first level |
+| Rotating camera in first room of first level | Exploring first level |
 | --|--|
 | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_000.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_001.gif" width="400"> |
 
-| Fighting rats on first level | Fighting blob |
+| Fighting rats on first level | Fighting Goo boss on level 5 |
 | --|--|
 | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_002.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_003.gif" width="400"> |
 
