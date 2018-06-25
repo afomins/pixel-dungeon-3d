@@ -6,7 +6,11 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 I'll just leave it over here and switch to other projects.
 
 # How it looks
-Following GIFs illustrate how 3D mod looks like comparing to original - **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` (*client*) attaches to original *Pixel Dungeon* `v1.9.7` running in **Android emulator** (*server*) and renders **same** game session:
+Following GIFs illustrate how 3D mod looks like comparing to original:
+ * On the left side you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
+ * On the right side you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` running in it and acting as *server*
+ 
+ *Client* connects to *server* via `java-websocket`, gets game state and renders **same** game session.
 
 | Rotating camera in first room of first level | Exploring first level |
 | --|--|
