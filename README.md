@@ -27,9 +27,7 @@ https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
 
 https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
-$TODO
-
-# Technical details
+# Implementation details
 $TODO
 
 # How to checkout sources and prepare project files
