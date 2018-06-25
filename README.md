@@ -35,7 +35,7 @@ $TODO
 *IntelliJ IDEA* (aka *Android Studio*) as my IDE, but you can use anything else as long as it supports *Gradle*.
 
 Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ IDEA*
-1. Create root project from `pixel-dungeon-3d.git`:
+1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
    Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
    
@@ -43,19 +43,19 @@ Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ ID
    
    When *Gradle sync* is over then you should see `pd3d` project with `core`, `desktop` and `android` modules.
    
-2. Import `pixel-dungeon-3d-lib.git`:
+2. Import [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib):
 
    Clone `git@github.com:afomins/pixel-dungeon-3d-lib.git` to `./pd3d/core/pixel-dungeon-3d-lib` directory (you can do this by navigating to `VCS -> Checkout from Version Control -> Git` menu)
    
    (Press `No` if *IntelliJ IDEA* asks you to create new project)
    
-3. Import `pixel-dungeon-classes.git`:
+3. Import [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes):
 
    Clone `git@github.com:afomins/pixel-dungeon-classes.git` to `./pd3d/core/pixel-dungeon-classes` directory.
    
    (Press `No` if *IntelliJ IDEA* asks you to create new project)
 
-4. Import `pixel-dungeon.git`:
+4. Import [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon):
 
    Clone `git@github.com:afomins/pixel-dungeon.git` to `./pd3d/core/pixel-dungeon` directory.
    
