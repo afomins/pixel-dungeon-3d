@@ -5,6 +5,17 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 
 I'll just leave it over here and switch to other projects.
 
+# How it looks
+Following GIFs illustrate how 3D mod looks like comparing to original - **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` (*client*) attaches to original *Pixel Dungeon* `v1.9.7` running in **Android emulator** (server) and renders **same** game session:
+
+| Rotating in first room of first level | Exploring first level |
+| --|--|
+| <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_000.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_001.gif" width="400"> |
+
+| Fighting rats on first level | Fighting blob |
+| --|--|
+| <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_002.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_003.gif" width="400"> |
+
 # External links
 https://twitter.com/matalokgames - twitter account where I used to share progress while developing [#pixeldungeon3d](https://twitter.com/search?f=tweets&vertical=default&q=%23pixeldungeon3d&src=typd)
 
@@ -15,9 +26,6 @@ https://redd.it/72642r - reddit post #1 where I first announced this 3D mod
 https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
 
 https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
-
-# How it looks
-Following 2 GIFs illustrate how my 3D mod looks like comparing with original - on the left side you see original *Pixel Dungeon* `v1.9.7` and on the right side is *Pixel Dungeon 3D* `v0.2.8` which is redering *same game session*:
 
 $TODO
 
