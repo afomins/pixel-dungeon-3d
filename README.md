@@ -51,7 +51,7 @@ Following external packages are managed by *Gradle*:
 5. `com.kotcrab.vis:vis-ui:1.4.0`
 6. `com.google.code.gson:gson:2.8.2`
 
-# How to checkout sources and prepare project files in *"IntelliJ IDEA"*
+# How to checkout sources and prepare project files in *"IntelliJ IDEA"* (aka *"Android Studio"*)
 1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
    Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
