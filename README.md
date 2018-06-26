@@ -32,13 +32,26 @@ https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
 https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
 # Implementation details
-$TODO
+*Pixel Dungeon 3D* source code is split between 4 git repositories:
+1. [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon) - forked original *Pixel Dungeon* project
 
-# How to checkout sources and prepare project files
-*Pixel Dungeon 3D* is split between 4 git repositories + some external dependent packages managed by *Gradle*. I was using *Eclipse* and 
-*IntelliJ IDEA* (aka *Android Studio*) as my IDE, but you can use anything else as long as it supports *Gradle*.
+2. [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes) - forken original *PD classes* project that is being used by `pixel-dungeon.git`
 
-Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ IDEA*
+3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core and `src-stub` packages that *simulate* Android dependencies
+
+4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared packages that are being used by both `pixel-dungeon.git` and `pixel-dungeon-3d.git` and contains methods that:  
+     a. Serialize game state and send it from original game (i.e. `pixledungeon.git`) to 3D engine (i.e. `pixel-dungeon-3d.git`) 
+     b. Send game commands in opposite direction from `pixel-dungeon-3d.git` to `pixel-dungeon.git`
+
+Following external packages are managed by *Gradle*:
+1. `org.json:json:20180130`
+2. `org.mini2Dx:universal-tween-engine:6.3.3`
+3. `org.java-websocket:Java-WebSocket:1.3.8`
+4. `com.badlogicgames.gdx:gdx:1.9.8`
+5. `com.kotcrab.vis:vis-ui:1.4.0`
+6. `com.google.code.gson:gson:2.8.2`
+
+# How to checkout sources and prepare project files in *"IntelliJ IDEA"*
 1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
    Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
@@ -85,17 +98,6 @@ When you complete above mentioned steps then your project should have following 
 
 
 **IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pd3d/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
-
-# External packages
-Following external packages are managed by *Gradle*:
-1. `org.json:json:20180130`
-2. `org.mini2Dx:universal-tween-engine:6.3.3`
-3. `org.java-websocket:Java-WebSocket:1.3.8`
-4. `com.badlogicgames.gdx:gdx:1.9.8`
-5. `com.kotcrab.vis:vis-ui:1.4.0`
-6. `com.google.code.gson:gson:2.8.2`
-
-You should not care about external packages because *Gradle* will automatically download them and update *IntelliJ IDEA* project files.
 
 # Build instructions for Desktop
 Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class.
