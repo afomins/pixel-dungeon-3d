@@ -37,7 +37,7 @@ https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
 2. [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes) - forked original *PD classes* project that is being used by `pixel-dungeon.git`
 
-3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core that acts as *client*. This repository contains code that receives game state from *server* and renders it in 3D space
+3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core and acts as *client*. This repository contains code that receives game state from *server* and renders it in 3D space via `libgdx`
 
 4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared code that is being used by both `pixel-dungeon.git` (i.e. *server*) and `pixel-dungeon-3d.git`(i.e. *client*) and contain packages that:
      
