@@ -6,11 +6,11 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 I'll just leave it over here and switch to other projects.
 
 # How it looks
-Following GIFs illustrate how 3D mod looks like comparing to original:
- * On the left side you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
- * On the right side you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` running in it and acting as *server*
+Following GIFs illustrate how 3D mod looks like comparing to original. Each GIF captures output of 2 windows:
+ * In left window you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
+ * In right window you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` which acts as *server*
  
- *Client* connects to *server* via `java-websocket`, gets game state and renders **same** game session.
+To record those GIFs I launched *client* (i.e. 3D engine) and *server* (i.e. original *Pixel Dungeon*) as different processes connected via `java-websocket`. This allowed me to capture output of both processes while they were rendering **same** game session.
 
 | Rotating camera in first room of first level | Exploring first level |
 | --|--|
@@ -33,17 +33,19 @@ https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
 # Implementation details
 *Pixel Dungeon 3D* source code is split between 4 git repositories:
-1. [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon) - forked original *Pixel Dungeon* project
+1. [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon) - forked original *Pixel Dungeon* project which acts as *server*. All gameplay logic is located in this repository
 
 2. [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes) - forked original *PD classes* project that is being used by `pixel-dungeon.git`
 
-3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core and `src-stub` packages that *simulate* Android dependencies
+3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core that acts as *client*. This repository contains code that receives game state from *server* and renders it in 3D space
 
-4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared packages that are being used by both `pixel-dungeon.git` and `pixel-dungeon-3d.git` and contains methods that:  
-     a. Serialize game state and send it from original game (i.e. `pixel-dungeon.git`) to 3D engine (i.e. `pixel-dungeon-3d.git`) 
-     b. Send game commands in opposite direction from `pixel-dungeon-3d.git` to `pixel-dungeon.git`
+4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared packages that are being used by both `pixel-dungeon.git` (i.e. *server*) and `pixel-dungeon-3d.git`(i.e. *client*) and contain packages that:
+     
+     a. Serialize game state and send it from *server* to *client* 
+     
+     b. Send game commands in opposite direction from *client* to *server*
 
-Following external packages are managed by *Gradle*:
+Following external packages are managed by *Gradle* which should automatically download them and update project file accordingly:
 1. `org.json:json:20180130`
 2. `org.mini2Dx:universal-tween-engine:6.3.3`
 3. `org.java-websocket:Java-WebSocket:1.3.8`
