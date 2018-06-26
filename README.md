@@ -40,7 +40,7 @@ https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core and `src-stub` packages that *simulate* Android dependencies
 
 4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared packages that are being used by both `pixel-dungeon.git` and `pixel-dungeon-3d.git` and contains methods that:  
-     a. Serialize game state and send it from original game (i.e. `pixledungeon.git`) to 3D engine (i.e. `pixel-dungeon-3d.git`) 
+     a. Serialize game state and send it from original game (i.e. `pixel-dungeon.git`) to 3D engine (i.e. `pixel-dungeon-3d.git`) 
      b. Send game commands in opposite direction from `pixel-dungeon-3d.git` to `pixel-dungeon.git`
 
 Following external packages are managed by *Gradle*:
