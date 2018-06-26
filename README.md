@@ -5,6 +5,21 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 
 I'll just leave it over here and switch to other projects.
 
+# How it looks
+Following GIFs illustrate how 3D mod looks like comparing to original:
+ * On the left side you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
+ * On the right side you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` running in it and acting as *server*
+ 
+ *Client* connects to *server* via `java-websocket`, gets game state and renders **same** game session.
+
+| Rotating camera in first room of first level | Exploring first level |
+| --|--|
+| <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_000.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_001.gif" width="400"> |
+
+| Fighting rats on first level | Fighting Goo boss on level 5 |
+| --|--|
+| <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_002.gif" width="400"> | <img src="https://github.com/afomins/pixel-dungeon-3d/blob/dev-pd3d/assets-raw/screenshots/pd_vs_pd3d_003.gif" width="400"> |
+
 # External links
 https://twitter.com/matalokgames - twitter account where I used to share progress while developing [#pixeldungeon3d](https://twitter.com/search?f=tweets&vertical=default&q=%23pixeldungeon3d&src=typd)
 
@@ -16,12 +31,7 @@ https://redd.it/7apfog - reddit post #2 where I published `v0.1.0` alpha version
 
 https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
-# How it looks
-Following 2 GIFs illustrate how my 3D mod looks like comparing with original - on the left side you see original *Pixel Dungeon* `v1.9.7` and on the right side is *Pixel Dungeon 3D* `v0.2.8` which is redering *same game session*:
-
-$TODO
-
-# Technical details
+# Implementation details
 $TODO
 
 # How to checkout sources and prepare project files
@@ -29,7 +39,7 @@ $TODO
 *IntelliJ IDEA* (aka *Android Studio*) as my IDE, but you can use anything else as long as it supports *Gradle*.
 
 Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ IDEA*
-1. Create root project from `pixel-dungeon-3d.git`:
+1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
    Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
    
@@ -37,19 +47,19 @@ Following instructions describe how to import *Pixel Dungeon 3D* to *IntelliJ ID
    
    When *Gradle sync* is over then you should see `pd3d` project with `core`, `desktop` and `android` modules.
    
-2. Import `pixel-dungeon-3d-lib.git`:
+2. Import [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib):
 
    Clone `git@github.com:afomins/pixel-dungeon-3d-lib.git` to `./pd3d/core/pixel-dungeon-3d-lib` directory (you can do this by navigating to `VCS -> Checkout from Version Control -> Git` menu)
    
    (Press `No` if *IntelliJ IDEA* asks you to create new project)
    
-3. Import `pixel-dungeon-classes.git`:
+3. Import [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes):
 
    Clone `git@github.com:afomins/pixel-dungeon-classes.git` to `./pd3d/core/pixel-dungeon-classes` directory.
    
    (Press `No` if *IntelliJ IDEA* asks you to create new project)
 
-4. Import `pixel-dungeon.git`:
+4. Import [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon):
 
    Clone `git@github.com:afomins/pixel-dungeon.git` to `./pd3d/core/pixel-dungeon` directory.
    
