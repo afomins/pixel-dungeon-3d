@@ -60,9 +60,7 @@ Following external packages are managed by *Gradle* which should automatically d
    
    In *"Import project"* window select `"Gradle"` and then tap `"Create separate module per source set"` checkbox.
    
-   When *Gradle sync* is over then you should see `
-   
-   ` project with `core`, `desktop` and `android` modules.
+   When *Gradle sync* is over then you should see `pd3d` project with `core`, `desktop` and `android` modules.
    
 2. Import [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib):
 
@@ -128,5 +126,5 @@ The only problem with this script is that it uses `/bin/bash` syntax which can b
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
 4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
 
-# How to build *client* in Desktop and *server* in *Android emulator*
+# How to build&run *client* in Desktop and *server* in Android emulator
 $TODO
