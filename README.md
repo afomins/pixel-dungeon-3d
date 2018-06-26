@@ -6,11 +6,11 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 I'll just leave it over here and switch to other projects.
 
 # How it looks
-Following GIFs illustrate how 3D mod looks like comparing to original. Each GIF captures output of 2 windows:
+Following GIFs illustrate how 3D mod looks like comparing to original. Each GIF captures output of two windows:
  * In left window you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
  * In right window you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` which acts as *server*
  
-To record those GIFs I launched *client* (i.e. 3D engine) and *server* (i.e. original *Pixel Dungeon*) as different processes connected via `java-websocket`. This allowed me to capture output of both processes while they were rendering **same** game session.
+To record those GIFs I launched *client* (i.e. 3D engine) and *server* (i.e. original *Pixel Dungeon*) as different processes connected via `java-websocket`. This allowed me to capture output of both processes while they were negotiating with each other and rendering **same** game session.
 
 | Rotating camera in first room of first level | Exploring first level |
 | --|--|
@@ -39,7 +39,7 @@ https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 
 3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core that acts as *client*. This repository contains code that receives game state from *server* and renders it in 3D space
 
-4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared packages that are being used by both `pixel-dungeon.git` (i.e. *server*) and `pixel-dungeon-3d.git`(i.e. *client*) and contain packages that:
+4. [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib) - shared code that is being used by both `pixel-dungeon.git` (i.e. *server*) and `pixel-dungeon-3d.git`(i.e. *client*) and contain packages that:
      
      a. Serialize game state and send it from *server* to *client* 
      
@@ -103,12 +103,12 @@ When you complete above mentioned steps then your project should have following 
 
 **IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pd3d/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
 
-# Build instructions for Desktop
+# How to build&run standalone Desktop application
 Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class.
 
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
-# Build instructions for Android
+# How to build&run standalone Android application
 Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly.
 
 For instance:
@@ -127,3 +127,6 @@ The only problem with this script is that it uses `/bin/bash` syntax which can b
 2. Run `./stubs.sh add` to replace `android.*` package import with `stub.android.*`
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
 4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
+
+# How to build *client* in Desktop and *server* in *Android emulator*
+$TODO
