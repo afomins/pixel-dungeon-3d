@@ -54,11 +54,13 @@ Following external packages are managed by *Gradle*:
 # How to checkout sources and prepare project files in *"IntelliJ IDEA"* (aka *"Android Studio"*)
 1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
-   Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `pd3d` directory.
+   Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `./pd3d` directory.
    
    In *"Import project"* window select `"Gradle"` and then tap `"Create separate module per source set"` checkbox.
    
-   When *Gradle sync* is over then you should see `pd3d` project with `core`, `desktop` and `android` modules.
+   When *Gradle sync* is over then you should see `
+   
+   ` project with `core`, `desktop` and `android` modules.
    
 2. Import [`pixel-dungeon-3d-lib.git`](https://github.com/afomins/pixel-dungeon-3d-lib):
 
@@ -117,7 +119,7 @@ This step is *"necessary evil"* which ensures that native *Pixel Dungeon* source
 
 To automate this task I created `./pd3d/scripts/stubs.sh` shell script that can add/delete this **stub hack** when necessary. 
 
-The only problem with this script is that it uses `/bin/bash` syntax which can be run either on native Linux or Cygwin.
+The only problem with this script is that it uses `/bin/bash` syntax which can be run either from Linux or Cygwin.
 
 1. Navigate to `./pd3d/scripts` directory
 2. Run `./stubs.sh add` to replace `android.*` package import with `stub.android.*`
