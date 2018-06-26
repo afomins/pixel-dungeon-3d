@@ -35,7 +35,7 @@ https://redd.it/8dvpcr - reddit post #3 where I published `v0.2.8` beta version
 *Pixel Dungeon 3D* source code is split between 4 git repositories:
 1. [`pixel-dungeon.git`](https://github.com/afomins/pixel-dungeon) - forked original *Pixel Dungeon* project
 
-2. [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes) - forken original *PD classes* project that is being used by `pixel-dungeon.git`
+2. [`pixel-dungeon-classes.git`](https://github.com/afomins/pixel-dungeon-classes) - forked original *PD classes* project that is being used by `pixel-dungeon.git`
 
 3. [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d) - root project that contains 3D engine core and `src-stub` packages that *simulate* Android dependencies
 
@@ -113,7 +113,7 @@ import javax.microedition.khronos.opengles.GL10;  -> import stub.javax.microedit
 import android.opengl.GLES20;                     -> import stub.android.opengl.GLES20;
 ```
 
-This step is *necessary evil* which ensures that native *Pixel Dungeon* sources call custom methods from `stub.android.*` packages instead of `android.*`. 
+This step is *"necessary evil"* which ensures that native *Pixel Dungeon* sources call custom methods from `stub.android.*` packages instead of `android.*`. 
 
 To automate this task I created `./pd3d/scripts/stubs.sh` shell script that can add/delete this **stub hack** when necessary. 
 
