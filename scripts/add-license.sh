@@ -1,3 +1,15 @@
+#!/bin/bash
+
+/bin/find .. | grep java$ | \
+while read file_name; do
+    echo -n $file_name
+    if grep "Oleg Dolya" $file_name > /dev/null; then
+        echo "... ignoring"
+        continue
+    fi
+    
+    echo "... ok"
+    cat > $file_name.new <<EOF
 /*
  * Pixel Dungeon 3D
  * Copyright (C) 2016-2018 Alex Fomins
@@ -16,9 +28,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package android.os;
+EOF
 
-public class Bundle 
-  extends BaseBundle {
-
-}
+    cat $file_name >> $file_name.new
+    mv  $file_name.new $file_name
+done
