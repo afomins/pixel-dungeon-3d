@@ -1,12 +1,12 @@
 # What is *"Pixel Dungeon 3D"*
-*"Pixel Dungeon 3D"* is mod for *"Pixel Dungeon"* `v1.9.7` that adds new 3D renderer and new GUI. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *"Pixel Dungeon"* with new 3D visuals and different controls.
+*"Pixel Dungeon 3D"* is mod for *"Pixel Dungeon"* that adds new 3D renderer and new GUI. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *"Pixel Dungeon"* with new 3D visuals and different controls.
 
 This was my hobby project that I was coding on my free time for 18 months. It is still half-finished and needs a lot of polishing, but I'm not going to continue development right now because I'm really tired of it! 
 
 I'll just leave it over here and switch to other projects.
 
 # Downloads
-*"Pixel Dungeon 3D"* binaries:
+*"Pixel Dungeon 3D"* `v0.2.8` binaries:
  * Desktop JAR - https://github.com/afomins/pixel-dungeon-3d/releases/download/v0.2.8/pd3d-v0.2.8.jar
  * Android APK - https://github.com/afomins/pixel-dungeon-3d/releases/download/v0.2.8/pd3d-v0.2.8.apk
 
