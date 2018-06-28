@@ -101,12 +101,12 @@ When you complete above mentioned steps then your project should have following 
 
 **IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pd3d/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
 
-# How to build&run standalone Desktop application
+# How to build standalone Desktop app
 Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class.
 
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
-# How to build&run standalone Android application
+# How to build standalone Android app
 Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly.
 
 For instance:
@@ -126,5 +126,5 @@ The only problem with this script is that it uses `/bin/bash` syntax which can b
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
 4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
 
-# How to build&run *client* in Desktop and *server* in Android emulator
+# How to build *client* app on Desktop and *server* app in Android emulator
 $TODO
