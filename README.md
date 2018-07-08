@@ -1,4 +1,4 @@
-# What is *"Pixel Dungeon 3D"*
+# Intro
 *"Pixel Dungeon 3D"* is mod for *"Pixel Dungeon"* that adds new 3D renderer and new GUI. This mod does not alter game logic, nor it adds any new gameplay elements - it's still good ol' *"Pixel Dungeon"* with new 3D visuals and different controls.
 
 This was my hobby project that I was coding on my free time for 18 months. It is still half-finished and needs a lot of polishing, but I'm not going to continue development right now because I'm really tired of it! 
@@ -10,12 +10,12 @@ I'll just leave it over here and switch to other projects.
  * Desktop JAR - https://github.com/afomins/pixel-dungeon-3d/releases/download/v0.2.8/pd3d-v0.2.8.jar
  * Android APK - https://github.com/afomins/pixel-dungeon-3d/releases/download/v0.2.8/pd3d-v0.2.8.apk
 
-# How it looks
-Following GIFs illustrate how 3D mod looks like comparing to original. Each GIF captures output of two windows:
+# GIFs
+Following GIFs show how 3D mod looks like comparing to original. Each GIF captures output of two windows:
  * In left window you see **Desktop** version of *Pixel Dungeon 3D* `v0.2.8` which acts as *client*
  * In right window you see **Android emulator** with original *Pixel Dungeon* `v1.9.7` which acts as *server*
  
-To record those GIFs I launched *client* (i.e. 3D engine) and *server* (i.e. original *Pixel Dungeon*) as different processes connected via `java-websocket`. This allowed me to capture output of both processes while they were negotiating with each other and rendering **same** game session.
+When doing standalone release I compile *client* and *server* into single app and, but to record those GIFs I launched *client* (i.e. 3D engine) and *server* (i.e. original *Pixel Dungeon*) as different processes connected via `java-websocket`. This allowed me to capture output of both processes while they were negotiating with each other and rendering **same** game session.
 
 | Rotating camera in first room of first level | Exploring first level |
 | --|--|
@@ -58,7 +58,7 @@ Following external packages are managed by *Gradle* which should automatically d
 5. `com.kotcrab.vis:vis-ui:1.4.0`
 6. `com.google.code.gson:gson:2.8.2`
 
-# How to checkout sources and prepare project files in *"IntelliJ IDEA"* (aka *"Android Studio"*)
+# Preparing *"IntelliJ IDEA"* project (aka *"Android Studio"*)
 1. Create root project from [`pixel-dungeon-3d.git`](https://github.com/afomins/pixel-dungeon-3d):
    
    Create new *IntelliJ IDEA* project by cloning `git@github.com:afomins/pixel-dungeon-3d.git` repository into `./pd3d` directory.
@@ -106,12 +106,12 @@ When you complete above mentioned steps then your project should have following 
 
 **IMPORTANT** - you should manually copy original game assets (`*.png` and `*.mp3` files) from `./pd3d/core/pixel-dungeon/assets` to `./pd3d/android/assets`. (**TODO:** Automate this step with *Gradle*)
 
-# How to build standalone Desktop app
+# Build instructions (Desktop JAR)
 Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd3d.desktop.DesktopLauncher` class.
 
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
-# How to build standalone Android app
+# Build instructions (Android JAR)
 Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly.
 
 For instance:
@@ -130,6 +130,3 @@ The only problem with this script is that it uses `/bin/bash` syntax which can b
 2. Run `./stubs.sh add` to replace `android.*` package import with `stub.android.*`
 3. Run `com.matalok.pd3d.AndroidLauncher` activity
 4. Run `./stubs.sh del` to revert `stub.adnroid.*` back to `android.*` 
-
-# How to build *client* app on Desktop and *server* app in Android emulator
-$TODO
