@@ -111,7 +111,7 @@ Select `./pd3d/android/assets` as your working directory and run `com.matalok.pd
 
 **IMPORTANT** - I've been developing for Java8 that's why it might not compile/run with different Java version.
 
-# Build instructions (Android JAR)
+# Build instructions (Android APK)
 Building for Android is a little bit trickier than building for Desktop because all `android.*` and `javax.*` imports from native *Pixel Dungeon* project should be renamed to `stub.android.*` and `stub.javax.*` accordigly.
 
 For instance:
