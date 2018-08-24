@@ -7,7 +7,7 @@ I'll just leave it over here and switch to other projects.
 
 # Gameplay video
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=KAm6Yi2TOT8" target="_blank"><img src="http://img.youtube.com/vi/KAm6Yi2TOT8/0.jpg" 
-alt="Playing beta version of PixelDungeon 3D mod (v0.2.8)" width="600" border="5" /></a>
+alt="Playing beta version of PixelDungeon 3D mod (v0.2.8)" width="300" border="5" /></a>
 
 
 # Downloads
