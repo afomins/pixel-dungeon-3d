@@ -5,6 +5,11 @@ This was my hobby project that I was coding on my free time for 18 months. It is
 
 I'll just leave it over here and switch to other projects.
 
+# Gameplay video
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=KAm6Yi2TOT8" target="_blank"><img src="http://img.youtube.com/vi/KAm6Yi2TOT8/0.jpg" 
+alt="Playing beta version of PixelDungeon 3D mod (v0.2.8)" width="600" border="5" /></a>
+
+
 # Downloads
 *"Pixel Dungeon 3D"* `v0.2.8` binaries:
  * Desktop JAR - https://github.com/afomins/pixel-dungeon-3d/releases/download/v0.2.8/pd3d-v0.2.8.jar
